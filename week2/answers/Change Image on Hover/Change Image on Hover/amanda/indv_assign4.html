@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Advanced Assignment I</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+      
+      <script>
+      		$(document).ready( function(){
+      			$("img").mouseover( function() {
+	      			$(this).fadeOut("fast", function() {
+	      				$(this).attr("src", "images/coat4.png");
+	      			});
+	      			$(this).fadeIn("fast");
+      			});
+      			
+      			$("img").mouseout( function() {
+	      			$(this).fadeOut("fast", function() {
+	      				$(this).attr("src", "images/" + $(this).attr("alt") + ".png");
+	      			});
+	      			$(this).fadeIn("fast");
+      			});
+      		});
+      </script>
+	</head>
+	
+	<body>
+		<img src="images/coat1.png" alt="coat1" />
+		<img src="images/coat2.png" alt="coat2" />
+		<img src="images/coat3.png" alt="coat3" />
+		<img src="images/coat4.png" alt="coat4" />
+	</body>
+</html>

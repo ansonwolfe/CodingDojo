@@ -1,0 +1,21 @@
+#message_textarea {
+	height: 80px;
+}
+
+#comment_textarea {
+	height: 45px;
+}
+
+#delete_text {
+	border-style: none;
+	background-color: transparent;
+	color: silver;
+	display: inline;
+}
+
+#delete_message {
+	border-style: none;
+	background-color: transparent;
+	color: silver;
+	display: inline;
+}

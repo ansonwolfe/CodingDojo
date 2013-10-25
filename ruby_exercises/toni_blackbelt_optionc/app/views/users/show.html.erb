@@ -1,0 +1,9 @@
+<% if signed_in? %>
+	<h1><%= @user.first_name+" "+@user.last_name %></h1>
+	<p>Email: <%= @user.email %></p>
+	<p>User ID: <%= @user.id %></p>
+
+	<a href="/friendbook/users">Home</a><br>
+<% else %>
+	<h2><a href="<%= signin_path %>">Sign in</a> or <a href="<%= register_path %>"> Register</a> to continue.</h2>
+<% end %>

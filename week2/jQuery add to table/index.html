@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery add to table</title>
+	<style type="text/css">
+		table td, tr, th{
+			border: 1px solid gray;
+			border-collapse: collapse;
+			margin: 0px;
+		}
+		table td {
+			vertical-align: center;
+			padding: 5px;
+		}
+
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function($)
+		// {
+		//   $("submit").click(function()
+		//   {
+		//     addTableRow($("table"));
+		//     return false;
+		//   });
+$("#submit, .check ").click(function() {
+$('#mytable tbody>tr:last')
+    .clone(true)
+    .insertAfter('#mytable tbody>tr:last').find('input').each(function(){
+        $(this).val('');
+    });
+});
+</script> 
+
+</head>
+<body>
+	
+
+	<form>
+  <table id="mytable">
+    <thead>
+    	<tr>
+    		<th>First Name</th>
+    		<th>Last Name</th>
+    		<th>Email Address</th>
+    		<th>Contact Number</th>
+    	</tr>
+	</thead>
+	<tbody>
+		<tr> 
+			<td>John Oliver</td>
+			<td>Rosales</td>
+			<td>jrosales@village88.com</td>
+			<td>123457890</td>
+		</tr>
+		<tr> 
+			<td>KB</td>
+			<td>Tonel</td>
+			<td>ktonel@village88.com</td>
+			<td>123457890</td>
+		</tr>
+		<tr> 
+			<td>Michael</td>
+			<td>Choi</td>
+			<td>mchoi@village88.com</td>
+			<td>123457890</td>
+		</tr>
+	 </tbody>
+  </table>
+
+
+  <p>
+  	<label>First Name</label>
+  	<input type="text" name="first_name" placeholder="First Name" />
+  	<label>Last Name</label>
+  	<input type="text" name="last_name" placeholder="Last Name" />
+  	<label>Email address</label>
+  	<input type="text" name="email" placeholder="email " />
+  	<label>Number</label>
+  	<input type="text" name="number" placeholder="Number" />
+
+	<input type="submit" value="submit" name="submit" >
+
+
+</body>
+</html>

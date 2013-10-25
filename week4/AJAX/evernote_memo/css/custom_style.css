@@ -1,0 +1,22 @@
+#message_textarea {
+	height: 80px;
+}
+
+#comment_textarea {
+	height: 45px;
+}
+
+#delete_text {
+	border-style: none;
+	background-color: transparent;
+	color: silver;
+	display: inline;
+}
+
+.post_it {
+	padding: 12px;
+	margin: 10px;
+	min-height: 150px;
+	background-color: #F3EEA5;
+	word-wrap:break-word;
+}

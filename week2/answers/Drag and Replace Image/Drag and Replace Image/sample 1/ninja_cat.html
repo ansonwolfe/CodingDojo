@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>jQuery Assessment Ninja</title>
+	<meta charset="utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#images_list').sortable().on('click', 'img', function(event) {
+				var target = $(this), src = target.attr('src');
+				target.attr('src', /cat/.test(src) ? src.replace('cat', 'ninja') : src.replace('ninja', 'cat'));
+			});
+		});
+	</script>
+	<style>
+		ul li {list-style-type:none}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>jQuery Assessment Ninja</h1>
+		<ul id="images_list">
+			<li><img src="img/ninja0.png" alt="layer" /></li>
+			<li><img src="img/ninja1.png" alt="layer" /></li>
+			<li><img src="img/ninja2.png" alt="layer" /></li>
+			<li><img src="img/ninja3.png" alt="layer" /></li>
+			<li><img src="img/ninja4.png" alt="layer" /></li>
+		</ul>
+	</div>
+</body>
+</html>

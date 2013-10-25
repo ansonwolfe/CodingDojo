@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>jQuery Advanced assignment</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#pic1').mouseover(function(){
+					$(this).fadeOut('fast').attr('src','images/img1_back.jpg').fadeIn('fast');
+				});	
+				$('#pic1').mouseout(function(){
+					$(this).fadeOut('fast').attr('src','images/img1_front.jpg').fadeIn('fast');
+				});
+
+				$('#pic2').mouseover(function(){
+					$(this).fadeOut('fast').attr('src','images/img2_back.jpg').fadeIn('fast');
+				});
+				$('#pic2').mouseout(function(){
+					$(this).fadeOut('fast').attr('src','images/img2_front.jpg').fadeIn('fast');
+				});
+
+				$('#pic3').mouseover(function(){
+					$(this).fadeOut('fast').attr('src','images/img3_back.jpg').fadeIn('fast');
+				});
+				$('#pic3').mouseout(function(){
+					$(this).fadeOut('fast').attr('src','images/img3_front.jpg').fadeIn('fast');
+				});
+
+				$('#pic4').mouseover(function(){
+					$(this).fadeOut('fast').attr('src','images/img4_back.jpg').fadeIn('fast');
+				});
+				$('#pic4').mouseout(function(){
+					$(this).fadeOut('fast').attr('src','images/img4_front.jpg').fadeIn('fast');
+				});
+			});
+
+
+		</script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul>
+			<li><img id="pic1" src="images/img1_front.jpg"></li>
+			<li><img id="pic2" src="images/img2_front.jpg"></li>
+			<li><img id="pic3" src="images/img3_front.jpg"></li>
+			<li><img id="pic4" src="images/img4_front.jpg"></li>
+
+		</ul>
+		
+
+	</div>
+
+</body>
+</html>

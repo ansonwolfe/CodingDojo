@@ -1,0 +1,32 @@
+<h1>Basic 2</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+
+<% @users.each do |user| %>
+		<tr>
+			<td><a href="users/<%= user.id %>"><%= user.first_name %>  <%= user.last_name %> </a></td>
+			<td><%= user.email_address %></td>
+			<td>
+				<form action="/users/<%= user.id %>/edit">
+					<input type="submit" value="edit user">
+				</form>
+				<form action="/users/<%= user.id %>" method="post">
+					<input type="submit" value="delete">
+					<input type="hidden" name="_method" value="delete">
+				</form>
+			</td>
+		</tr>	
+	<% end %>
+	</tbody>
+</table>
+<p>	
+	<a href="users/new">Create new User</a>
+</p>

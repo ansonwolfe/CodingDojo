@@ -1,0 +1,27 @@
+<h1>Register User</h1>
+
+<form action="/users" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="text" name="user[first_name]" placeholder="First Name" /> 
+	<% if @user.errors[:first_name].present? %>
+		<%= @user.errors[:first_name].join %>
+	<% end %><br>
+	<input type="text" name="user[last_name]" placeholder="Last Name" /> 
+	<% if @user.errors[:last_name].present? %>
+		<%= @user.errors[:last_name].join %>
+	<% end %><br>
+	<input type="text" name="user[email]" placeholder="Email" /> 
+	<% if @user.errors[:email].present? %>
+		<%= @user.errors[:email].join(", ") %>
+	<% end %><br>
+	<input type="password" name="user[password]" placeholder="Password" /> 
+	<% if @user.errors[:password].present? %>
+		<%= @user.errors[:password].join(", ") %>
+	<% end %><br>
+	<input type="password" name="user[password_confirmation]" placeholder="Confirm Password" /> 
+	<% if @user.errors[:password_confirmation].present? %>
+		<%= @user.errors[:password_confirmation].join(", ") %>
+	<% end %><br>
+	<input type="submit" value="Add User" />
+</form><br>
+<a href="/friendbook/users">Home</a><br>

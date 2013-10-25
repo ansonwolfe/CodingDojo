@@ -1,0 +1,39 @@
+.black 
+{
+	background-color: black;
+}
+
+.red 
+{
+	background-color: red;
+}
+
+.green 
+{
+	background-color: #556b2f;
+}
+
+.cream 
+{
+	background-color: #ffffe0;
+}
+
+table 
+{
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+div 
+{
+	margin: 30px;
+}
+
+h1 
+{
+	margin: 30px;
+}
+
+td {
+	padding: 20px;
+}

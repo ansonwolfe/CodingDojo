@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>jQuery Assessment Ninja</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>  
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#ninja').sortable();
+			$('#ninja0').click(function(){
+				var src = $(this).attr('src');
+				if(src == 'img/ninja0.png'){
+					$(this).attr('src', 'img/cat0.png');
+				}
+				else{
+					$(this).attr('src', 'img/ninja0.png');
+				}
+			});
+			$('#ninja1').click(function(){
+				var src = $(this).attr('src');
+				if(src == 'img/ninja1.png'){
+					$(this).attr('src', 'img/cat1.png');
+				}
+				else{
+					$(this).attr('src', 'img/ninja1.png');
+				}
+			});
+			$('#ninja2').click(function(){
+				var src = $(this).attr('src');
+				if(src == 'img/ninja2.png'){
+					$(this).attr('src', 'img/cat2.png');
+				}
+				else{
+					$(this).attr('src', 'img/ninja2.png');
+				}
+			});
+			$('#ninja3').click(function(){
+				var src = $(this).attr('src');
+				if(src == 'img/ninja3.png'){
+					$(this).attr('src', 'img/cat3.png');
+				}
+				else
+				{
+					$(this).attr('src', 'img/ninja3.png');
+				}
+			});
+			$('#ninja4').click(function(){
+				var src = $(this).attr('src');
+				if(src == 'img/ninja4.png'){
+					$(this).attr('src', 'img/cat4.png');
+				}
+				else{
+					$(this).attr('src', 'img/ninja4.png');
+				}
+			});
+		});
+	</script>
+	<style>
+		ul li {list-style-type:none}
+	</style>
+</head>
+<body>
+	<h1 id="heading">jQuery Assessment Ninja</h1>
+	<ul id="ninja">
+		<li><img id ="ninja0" src="img/ninja0.png" alt="ninja0" /></li>
+		<li><img id ="ninja1" src="img/ninja1.png" alt="ninja1" /></li>
+		<li><img id ="ninja2" src="img/ninja2.png" alt="ninja2" /></li>
+		<li><img id ="ninja3" src="img/ninja3.png" alt="ninja3" /></li>
+		<li><img id ="ninja4" src="img/ninja4.png" alt="ninja4" /></li>
+	</ul>
+</body>
+</html>

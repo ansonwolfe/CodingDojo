@@ -1,0 +1,23 @@
+<h1>User <%= @user.id %></h1>
+<h1>User <%= @user.name %></h1>
+<h1>Logged in <%= session['user_id'] %></h1>
+
+<div id="comments">
+		<% @user_comments.each do |comment| %>
+			<blockquote class="comment">
+				<p><%= comment.content %></p>
+			</blockquote>
+		<% end %>
+	</div>
+
+<form action='\comments' method = 'post'>
+	 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<label>New Comment</label><br />
+	<input type='text' name='comment[content]'><br />
+	<input type='hidden' name='comment[friend_id]' value='<%= session['user_id'] %>'>
+	<input type='hidden' name='user_id' value='<%= @user.id %>'>
+	<input type='submit' value='Comment'>
+</form>
+
+<a href="/signout">signout</a>
+

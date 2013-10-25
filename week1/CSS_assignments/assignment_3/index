@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> CSS Assignment 3</title>
+		<meta name="keywords" content="css, assignments, practice, exercise" />
+		<meta name="description" content="CSS exercise number 3!" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<!-- wrapper encapsulates whole page -->
+			<div id="header">
+				<div id="top_right">
+					<ul>
+						<li><a href="">Products</a></li>
+						<li><a href="" class="left_border">Learn SEM</a></li>
+						<li><a href="" class="left_border">Blog</a></li>
+						<li><a href="" class="left_border">Support</a></li>
+						<li><a href="" class="left_border">AdWords Grader</a></li>
+					</ul>
+					<input style="submit" value="Login" class="button button_blue_gradient login">
+				</div>
+				<p>
+					<img src="http://www.wordstream.com/sites/default/files/qc_ws_logo.png" alt="wordstream logo">
+				<p>
+				<h1>WordStream Internet Marketing Software</h1>
+			</div>	
+			<div id="left_nav">
+				<h3><a href="">WordStream for PPC</a></h3>
+				<h4>Drive More Profits through PPC!</h4>
+				<p>
+					Get started with <a href="">WordStream's</a> powerful PPC platform today!
+				</p>	
+					<input style="submit" value="SCHEDULE DEMO" class="button big_button button_blue_gradient">
+						<br>
+					<input style="submit" value="FREE TRIAL" class="button big_button button_orange_gradient">
+				<p class="center lower_border">
+					(No Credit Card Required)
+				</p>
+				<img src="ad.png" alt="advertisement">
+			</div>
+			<!-- end left nav section -->
+			<!-- begin main section -->
+			<div id="main_content">
+				<!-- begin breadcrumbs section -->
+				<div id="breadcrumbs_bar" class="lower_border">
+					<ul>
+						<li><img src="http://www.wordstream.com/sites/all/themes/qc_ws/images/brdhomIcon.png" alt="breadcrumb icon"></li>
+						<li><a href="">PPC</a></li>
+					</ul>
+					<div id="phone" class="right">
+						<img class="left" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQbGcBh0jlyM2fpHI1S6ptO_903n0zJhXwDOAgywqQoChGvMZNvWA" alt="phone">
+						Mon - Fri 9a.m. - 5 p.m. (EST)<br>
+						<h5>800.800.8000</h5>
+						International: +1.800.800.8000
+					</div>
+				</div>
+				<!-- end breadcrums section -->
+				<!-- continue with main section -->
+				<h5><a href="">PPC - Achieve More Efficient Pay-Per Click (PPC) Marketing</a></h5>
+				<p>
+					<span class="bold">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Quisque quis libero in odio laoreet euismod. Cras auctor, lectus ac vehicula hendrerit, metus ligula varius urna, a rhoncus nibh nisl commodo est. 
+				</p>
+				<ul>
+					<li>
+						<span class="bold">Aliquam erat volutpat.</span> Aliquam ullamcorper, justo et aliquet hendrerit, felis nunc rhoncus ligula, ut aliquam <a href="">mauris sapien in ligula.</a> Quisque quis purus fringilla purus pretium varius in non urna. Suspendisse potenti. 
+					</li>
+					<li>
+						<span class="bold">Donec nec metus</span> quis risus tempor posuere. Sed nisl ipsum, mollis sit <a href="">amet hendrerit a, facilisis nec</a> leo. Duis quis enim dui, eu dignissim urna. Maecenas mollis, enim at dictum elementum, massa justo adipiscing sapien, nec scelerisque eros nisl quis sem.
+					</li>
+				</ul>
+				<p>
+					Curabitur pharetra pulvinar ipsum, vel aliquet sapien gravida vel. Nunc eros est, dictum quis cursus ut, <a href="">sollicitudin quis tellus</a>. Nullam ullamcorper volutpat tortor at scelerisque. Aliquam at lacus sit amet lorem adipiscing congue. Vivamus ornare metus in risus pretium posuere.
+				</p>
+				<div id="promotion">
+					<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSO-gUUhJjPn8L1Fc-Y_YDnT8vP45yLGhcm2N8Qwff8sVMnM4Ce" class="left" alt="checker flag icon">
+					<div id="promo_text" class="right">	
+						<h5><a href="">Drive More Profits Through PPC - Try Our Platform FREE</a></h5>
+						<p> 
+							Donec a orci urna, <span class="bold">vel viverra justo</span>. Suspendisse sollicitudin viverra congue. Quisque blandit, mi sed porta pretium, diam orci hendrerit magna, nec egestas purus quam accumsan neque. <span class="bold">Nunc molestie</span> posuere mi, in fringilla ligula feugiat sit amet.
+						</p>
+						<input style="submit" value="Get Started Today!" class="button med_button button_green_gradient">
+					</div>	
+					<div class="clear"></div>
+				</div>	
+			</div>
+			<div class="clear"></div>
+		</div>
+	</body>	
+</html>	

@@ -1,0 +1,16 @@
+# first user create 3 posts, assign the first 2 posts to the first blog and the last post to the last blog
+User.first.posts = [Blog.find(1).posts.create(:title => "Ben2", :content =>"Testing if this works"), Blog.find(1).posts.create(:title => "Loves2", :content =>"Also another test"), Blog.find(2).posts.create(:title => "Ruby2", :content =>"Got to do it! Sharks WIN!!!!")]
+
+#create messages written by the second user in any post
+User.find(1).messages = [Post.find(2).messages.create(:author =>"Apple", :message =>"Origame!")]
+
+#rake db rollback - for those times when you need to change model or migration files..and re-mirgrate
+	rake db:rollback
+	rake db:migrate
+
+Be able to retrieve all messages from any specific post
+Post.find(2).messages.all
+
+
+ retrieve all the users that "own" any specific blog 
+	Owner.all

@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>Validator</title>  
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>  
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("form.validator").submit(function(){
+					var form = $(this);
+
+					$.getJSON(form.attr('action'), form.serialize(), function(result) {  
+						
+						form.siblings('div.result').empty();
+						
+						result.forEach(function(error){
+							form.siblings('div.result').append('<p>'+ error +'</p>');
+						});
+
+					}); 
+
+					return false;
+				});
+			});
+        </script>  
+    </head>  
+    <body>  
+		<h3>Validator</h3>
+		<div class='validation_field'>
+			<div class='result'></div>
+			<hr>
+			<form class='validator' action='/validate' method='get'>
+				<p>First Name</p>
+				<input type='text' name='first_name'>
+				<p>Last Name</p>
+				<input type='text' name='last_name'>				
+				<p>Email Address</p>
+				<input type='text' name='email'>
+				<button type='submit'>Add Client</button>
+			</form>
+			
+		</div>
+		
+		
+    </body>  
+</html>  

@@ -1,0 +1,19 @@
+#wrapper {
+	margin: 0px auto;
+	width: 800px;
+}
+#puzzles {
+	float: left;
+	margin: 0px 40px;
+}
+ul {
+	list-style: none;
+	display: block;
+}
+#swapping {
+	float: left;
+	margin: 0px 40px;
+}
+.img0 {
+	display: none;
+}

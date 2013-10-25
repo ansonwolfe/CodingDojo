@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description" content="Learning Twitter Bootstrap v2.3.1">
+		<meta name="keywords" content="HTML,CSS, Twitter Bootstrap, Bootstrap">
+		<meta name="author" content="ansonwolfe">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+		<script type="js/bootstrap.js"></script>
+	</head>
+	<!-- use these from bootstrap:
+hero-unit, table, nav, navbar, row, span4, btn, btn-primary, btn-success, btn-danger, label, label-success, label-important, label-info, alert, alert-error, alert-success, alert-info, dropdown, dropdown-menu.
+ -->
+	<body>
+
+			<!-- begin navigation bar -->
+		<div class="navbar navbar-inverse">
+		  	<div class="navbar-inner">
+
+				    <a class="brand" href="#">Bootstrapping!</a>
+				    
+				    <ul class="nav">
+				      <li><a href="#">Home</a></li>
+				      <li><a href="#">One</a></li>
+				      <li><a href="#">Two</a></li>
+			        
+						<!-- <ul class="nav"> -->
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Dropdown <b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="">test 1</a></li>
+									<li><a href="">test 2</a></li>
+									<li><a href="">test 3</a></li>
+								</ul>
+							</li>
+					</ul>
+	            </div> 		 
+	  		</div>
+	  	</div>
+		  	<!-- end navigation bar -->
+		  	<!-- begin hero unit or giant banner -->
+			<div class="hero-unit">
+				  <h1>Hot Cocoa > Coffee</h1>
+				  <p>It's better than coffee.</p>
+				  <p>
+				    <a class="btn btn-primary btn-large">See Reasons Why</a>
+				  </p>
+			</div>
+			<!-- end of hero unit or giant banner -->
+			<!-- begin other things  -->
+
+
+			<script src="myScript.js"></script>
+
+
+
+
+
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Theobromine</th>
+							<th>Caffeine</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Gentle</td>
+							<td>Intense</td>
+						</tr>
+						<tr>
+							<td>Mild Effect</td>
+							<td class="success">Strong Effect</td>
+						</tr>
+						<tr>
+							<td>Very Slow Onset</td>
+							<td>Fast Acting</td>
+						</tr>
+						<tr>
+							<td>50% in bloodstream after 6 to 10 hours</td>
+							<td>50% in bloodstream after 2 to 5 hours</td>
+						</tr>
+						<tr>
+							<td id="highlight_red">Increases feeling of well being</td>
+							<td>Increases alertness</td>
+						</tr>
+						<tr>
+							<td>Mild Antidepressant</td>
+							<td>Increases emotional stress</td>
+						</tr>
+						<tr>
+							<td id="highlight_red">Gentle, smooth, sensual stimulation</td>
+							<td>Jagged, nervous stimulation</td>
+						</tr>
+						<tr>
+							<td>Stimulates cardiovascular system</td>
+							<td>Stimulates cardiovascular system</td>
+						</tr>
+						<tr>
+							<td>Stimulates muscular system</td>
+							<td>Stimulates respiratory system</td>
+						</tr>
+						<tr>
+							<td>Mild effect on central nervous system</td>
+							<td>Strong effect on central nervous system</td>
+						</tr>
+						<tr>
+							<td>Almost no one is allergic</td>
+							<td>Many people allergic</td>
+						</tr>
+						<tr>
+							<td>Not addictive</td>
+							<td>Physically addictive</td>
+						</tr>
+						<tr>
+							<td>No withdrawal symptoms</td>
+							<td>Many proven withdrawl symptoms</td>
+						</tr>
+						<tr>
+							<td>Mild diuretic</td>
+							<td>Extreme diuretic</td>
+						</tr>
+					</tbody>
+				</table>
+
+			<!-- Other things per requested in assignment -->
+		  	<div class="btn-group">
+				  <button class="btn">Button</button>
+				  <button class="btn btn-primary">Button Primary</button>
+				  <button class="btn btn-success">Button Success</button>
+				  <button class="btn btn-danger">Button DANGER!</button>
+			</div>	
+				<p>
+					<span class="label">Default label</span>
+					<span class="label-success">Default success</span>
+					<span class="label-important">Default important</span>
+					<span class="label-info">Default info</span>
+				</p>
+			<div class="row-fluid">	
+				<div class="span4 offset1">
+					<div class="alert">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>Warning!</strong> Bootstrap is tediously long!
+					</div>
+					<div class="alert alert-error">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>Error!</strong> I am an error!
+					</div>
+				</div>
+				<div class="span4 offset2">
+					<div class="alert alert-success">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>Success!</strong> This project is a success!
+					</div>
+					<div class="alert alert-info">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>For Your Information:</strong> Bootstrap is an awesome framework!
+					</div>
+				</div>
+			</div>	
+		</div>
+	</body>	
+</html>

@@ -1,0 +1,203 @@
+/*wrapper to wrap around webpage*/
+#wrapper {
+	width: 860px;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 8pt;
+	margin: 0px auto;
+	line-height: 1.5em;
+}
+	#wrapper a {
+		color: #234F7E;
+	}
+	#wrapper a:hover {
+		color: black;
+		text-decoration: none;
+	}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+/*buttons!*/
+.button{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+}
+.big_button {
+	width:98%;
+	height: 25px;
+	margin: 2px auto;
+}
+.med_button {
+	height: 25px;
+	width: 125px;
+}
+.button_blue_gradient {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.button_orange_gradient {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.button_green_gradient {
+	color: #e8f0de;
+	border: solid 1px #538312;
+	background: #64991e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+	background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+/*end of button stuff*/
+.center {
+	text-align: center;
+}
+.lower_border{
+	padding-bottom: 7px;
+	border-bottom: 1px solid silver;
+}
+.bold {
+	font-weight: bold;
+}
+h3 {
+	font-size: 10pt;
+}
+h3 a{
+	text-decoration: none;
+}
+h4 {
+	font-size: 9pt;
+	color: orange;
+}
+h5 {
+	font-size: 11pt;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+h5 a {
+	text-decoration: none;
+}
+/*end of global elements*/
+/*begin header section*/
+#header {
+	min-height: 80px;
+}
+	#header img {
+		width: 180px;
+		margin: 25px 0px 10px 10px;
+	}
+	#header h1 {
+		background-color: #1A68B6;
+		color: white;
+		font-family: arial, verdana;
+		font-size: 14pt;
+		padding: 15px 0px 10px 10px;
+	}
+	/*begin top right navigation*/
+	#top_right{
+		float: right;
+		width: 450px;
+		margin: -10px 25px;
+	}
+		#top_right ul {
+			background-color: #FAFAFA;
+			list-style: none;
+			padding: 0px 2px 9px 9px;
+			margin: 0px 20px;
+			width: 325px;
+			float: left;
+			border: 1px solid silver;
+			-webkit-border-bottom-right-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+		#top_right ul li {
+			display: inline-block;
+			padding: 0px 5px;
+		}
+		#top_right a {
+			text-decoration: none;
+			color: #7E807A;
+			font-size: 7pt;
+		}
+		.left_border {
+			border-left: 1px solid #7E807A;
+			padding-left: 7px;
+		}
+		/*end top right navigation*/
+		.login {
+		width: 35px;
+		font-size: 7pt;
+		padding: 2px 5px;
+		float: right;
+		}
+/*end of header section*/
+#left_nav {
+	min-height: 450px;
+	width: 180px;
+	float: left;
+}
+	#left_nav img{
+		width: 90%
+	}
+#main_content {
+	width: 630px;
+	height: 620px;
+	margin-left: 25px;
+	float: left;
+}
+	#breadcrumbs_bar {
+		height: 60px;
+		margin-bottom: 3px;
+	}
+		#breadcrumbs_bar a {
+			text-decoration: none;
+		}
+		#breadcrumbs_bar ul {
+			padding: 0px 5px 7px 5px;
+			float: left;
+		}
+			#breadcrumbs_bar ul li{
+				display: inline;
+			}
+		#phone {
+			width: 230px;
+			padding: 10px 1px;
+			float:right;
+		}
+		#phone img {
+			width: 45px;
+			margin: 0px 15px;
+		}
+		#phone h5 {
+			color: #2F9FF3;
+			font-size: 18pt;
+			margin: 0px;
+		}
+	#promotion {
+		border: 5px solid #75ADD1;
+		padding: 5px;
+		width: 500px;
+	}
+		#promo_text {
+			width: 420px;
+			margin-top: -10px;
+		}

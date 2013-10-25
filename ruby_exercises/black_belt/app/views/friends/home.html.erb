@@ -1,0 +1,37 @@
+
+<h1>Wecome <%= @user.first_name %> </h1>
+
+You have <a href="/friends"><%= @no_friends %> friend(s).</a>
+
+
+<h3>Notification:</h3>
+<% if @friend_req.any? %>
+	<table class="table table-bordered table-hover table-condensed">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @friend_req.each do |request| %>
+				<tr>
+					<td><%= request.user.first_name %> <%= request.user.last_name %> wants to be your friend. </td>
+					<td>
+						<form action="<%= request.id %>" method="post">
+							<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden" />
+							<input type="hidden" name="_method" value="put" />
+							<input="hidden" name="id" value="<%= request.id %>" />
+							<input type="hidden" name="friend[status]" value="2" />
+							<input type="submit" value="Accept">
+						</form> Decline</td>
+				</tr>
+
+			<% end %>	
+		</tbody>
+	</table>
+<% else %>
+	<h6>You have no notifications at this time.</h6>	
+<% end %>	
+
+<h3>Suggested Friends</h3>

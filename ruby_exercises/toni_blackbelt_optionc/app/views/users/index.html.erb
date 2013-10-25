@@ -1,0 +1,7 @@
+<h1>Users</h1>
+<a href="<%= register_path %>">Register new user</a><br>
+<a href="<%= signout_path %>">Sign Out</a>
+
+<% @users.each do |user| %>
+<h3><a href="<%= user_path(user.id) %>"><%= user.first_name+" "+user.last_name %></a></h3>
+<% end %>

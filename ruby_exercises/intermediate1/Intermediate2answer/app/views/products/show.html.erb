@@ -1,0 +1,32 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	<%= @product.name %>
+<% end %>
+
+<fieldset>
+	<legend><%= "Product Name: #{@product.name}" %></legend>
+	<p><strong>Product Description:</strong></p>
+	<p><%= @product.description.nil? or @product.description == "" ? '<span class="muted">No description yet.</span>'.html_safe : @product.description %></p>
+	<%= link_to "Edit product info", edit_product_path(@product.id), :class => "btn btn-mini" %>
+	<h3>Comments:</h3>
+	<% if flash[:message] %>
+		<div class="alert">
+			<p><%= flash[:message] %></p>
+		</div>
+	<% end %>
+	<div id="comments">
+		<% @product_comments.each do |comment| %>
+			<blockquote class="comment">
+				<p><%= comment.content %></p>
+				<small>Posted by <%= comment.author %></small>
+			</blockquote>
+		<% end %>
+	</div>
+	<%= simple_form_for [@product, @comment], :html => {:id => "comment_for_product", :class => "form-horizontal"} do |form| %>
+		<div class="control-group">
+			<%= form.input :author, :label => false, :placeholder => "Author" %>
+			<%= form.text_area :content, :placeholder => "Content", :rows => 3 %>
+		</div>
+		<%= form.button :submit, :class => "btn btn-primary" %>
+	<% end %>
+</fieldset>

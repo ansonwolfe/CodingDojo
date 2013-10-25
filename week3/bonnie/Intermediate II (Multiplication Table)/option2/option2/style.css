@@ -1,0 +1,24 @@
+.emphasized {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.highlighted {
+	background-color: gray;
+}
+
+th {
+	border: 1px solid black;
+	width: 25px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+td {
+	border: 1px solid black;
+	width: 25px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}

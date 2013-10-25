@@ -1,0 +1,54 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Add a new user
+<% end %>
+
+<%= simple_form_for @user, :html => {:class => "form-horizontal"} do |form| %>
+	<fieldset id="new_user_form">
+		<legend><h2>Create a user:</h2></legend>
+		<% if flash[:success] %>
+			<div class="alert alert-success">
+				<%= flash[:success] %>
+			</div>
+		<% elsif flash[:errors] %>
+			<div class="alert alert-error">
+			<% flash[:errors].each do |message| %>
+				<p><%= message %></p>
+			<% end %>
+			</div>	
+		<% end %>
+		<div class="control-group">
+			<label for="first_name" class="control-label">First Name</label>
+			<div class="controls">
+				<%= form.input :first_name, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="last_name" class="control-label">Last Name</label>
+			<div class="controls">
+				<%= form.input :last_name, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="email_address" class="control-label">Email Address</label>
+			<div class="controls">
+				<%= form.input :email_address, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="password" class="control-label">Password</label>
+			<div class="controls">
+				<%= form.input :password, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="password_confirmation" class="control-label">Confirm Password</label>
+			<div class="controls">
+				<%= form.input :password_confirmation, :label => false %>
+			</div>
+		</div>
+		<div class="controls">
+			<%= form.button :submit, :class => "btn btn-primary" %>
+		</div>
+	</fieldset>
+<% end %>

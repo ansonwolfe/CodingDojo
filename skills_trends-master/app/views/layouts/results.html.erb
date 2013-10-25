@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %></title>
+  <%= stylesheet_link_tag    "results", :media => "all" %>
+  <%= javascript_include_tag "results"  %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <%= javascript_include_tag "highcharts"  %>
+  
+  <%= csrf_meta_tags %>
+  <%= yield :javascript %>
+</head>
+<body>
+	<div id='wrapper'>
+		<div id='header'>
+      <%= yield :header_pic %>
+			
+		</div>
+<%= yield %>
+	</div>
+</body>
+</html>

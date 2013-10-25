@@ -1,0 +1,12 @@
+.note{
+	float:left;
+	width:150px;
+	height:200px;
+	border:1px solid silver;
+	padding:10px;
+	margin:5px;
+}
+
+h1{
+	clear:both;
+}

@@ -1,0 +1,14 @@
+<h1>Sign In</h1>
+
+<% if flash[:error] %>
+	<p><%= flash[:error] %></p>
+<% end %>
+
+<form action="/sessions" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="text" name="email" placeholder="Email" /><br>
+	<input type="password" name="password" placeholder="Password" /><br>
+	<input type="submit" value="Sign In" />
+</form><br>
+
+<a href="<%= register_path %>">Register new user</a>

@@ -1,0 +1,87 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.puzzle').sortable();
+			$('.puzzle').disableSelection();
+			$('img[src="puzzles/cat01.png"]').click(function () {
+				$(this).attr('src',"puzzles/ninja01.png")
+				$('img[src="puzzles/ninja01.png"]').click(function () {
+					$(this).attr('src',"puzzles/cat01.png")
+				});
+			 });
+			$('img[src="puzzles/cat02.png"]').click(function () {
+				$(this).attr('src',"puzzles/ninja02.png")
+				$('img[src="puzzles/ninja02.png"]').click(function () {
+					$(this).attr('src',"puzzles/cat02.png")
+				});
+			 });
+			$('img[src="puzzles/cat03.png"]').click(function () {
+				$(this).attr('src',"puzzles/ninja03.png")
+				$('img[src="puzzles/ninja03.png"]').click(function () {
+					$(this).attr('src',"puzzles/cat03.png")
+				});
+			 });
+			$('img[src="puzzles/cat04.png"]').click(function () {
+				$(this).attr('src',"puzzles/ninja04.png")
+				$('img[src="puzzles/ninja04.png"]').click(function () {
+					$(this).attr('src',"puzzles/cat04.png")
+				});
+			 });
+			$('img[src="puzzles/cat05.png"]').click(function () {
+				$(this).attr('src',"puzzles/ninja05.png")
+				$('img[src="puzzles/ninja05.png"]').click(function () {
+					$(this).attr('src',"puzzles/cat05.png")
+				});
+			 });
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="puzzles">
+			<h3>Puzzles</h3>
+			<ul class="puzzle">
+				<li><img src="puzzles/ninja01.png" alt=""></li>
+				<li><img src="puzzles/ninja02.png" alt=""></li>
+				<li><img src="puzzles/ninja03.png" alt=""></li>
+				<li><img src="puzzles/ninja04.png" alt=""></li>
+				<li><img src="puzzles/ninja05.png" alt=""></li>
+			</ul>
+			<ul class="puzzle">
+				<li><img src="puzzles/cat01.png" alt=""></li>
+				<li><img src="puzzles/cat02.png" alt=""></li>
+				<li><img src="puzzles/cat03.png" alt=""></li>
+				<li><img src="puzzles/cat04.png" alt=""></li>
+				<li><img src="puzzles/cat05.png" alt=""></li>
+			</ul>
+		</div>
+		<div id="swapping">
+			<h3>Click on the image:</h3>
+			<ul>
+				<li class='image'>
+					<img id="img1" src="puzzles/cat01.png" alt=""/>
+				</li>
+				<li class='image'>
+					<img id="img1" src="puzzles/cat02.png" alt="">
+				</li>
+				<li class='image'>
+					<img id="img1" src="puzzles/cat03.png" alt="">
+				</li>
+				<li class='image'>
+					<img class="img1" src="puzzles/cat04.png" alt="">
+				</li>
+				<li class='image'>
+					<img class="img1" src="puzzles/cat05.png" alt="">
+				</li>
+			</ul>
+		</div>	
+	</div>
+</body>
+</html>

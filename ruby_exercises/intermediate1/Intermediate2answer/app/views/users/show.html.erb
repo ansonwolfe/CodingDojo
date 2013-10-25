@@ -1,0 +1,12 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Hello <%= @user.first_name.capitalize %>!
+<% end %>
+
+<fieldset>
+	<legend><%= "Hello #{@user.first_name.capitalize}" %></legend>
+	<p><strong>First Name:</strong> <%= @user.first_name.capitalize %></p>
+	<p><strong>Last Name:</strong> <%= @user.last_name.capitalize %></p>
+	<p><strong>Email Address:</strong> <%= @user.email_address %></p>
+	<%= link_to "Edit profile", edit_user_path(@user.id), :class => "btn btn-mini" %>
+</fieldset>

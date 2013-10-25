@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JQuery Exam: Datepicker</title>
+		<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>		
+		<script>
+			$(document).ready(function(){
+
+				$('input').datepicker();
+
+				$('form').submit(function(){
+
+					var from_date = $("input[name='from_date']").val();
+					var to_date = $("input[name='to_date']").val();
+					var info_text = "Your Form Info: From: "+from_date+' To: '+to_date;
+
+					$('#form_info').text(info_text);
+
+					return false;
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id='wrapper'>
+			<h1>Datepicker</h1>
+			
+			<div id='form_info'></div>
+			<form action='something.php' method='post'>
+				<label for='from_date'>From Date:</label>
+				<input name='from_date' type='text'/><br />
+				<label for='to_date'>To Date:</label>
+				<input name='to_date' type='text'/><br />
+				<input type='submit'></input>
+			</form>
+		</div>
+	</body>
+</html>

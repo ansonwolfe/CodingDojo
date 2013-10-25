@@ -1,0 +1,23 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Display all users
+<% end %>
+
+<h1>List of Users:</h1>
+<% if flash[:message] %>
+<div class="alert">
+	<%= flash[:message] %>
+</div>
+<% end %>
+<% if @users %>
+	<% @users.each do |user| %>
+	<div class="well">
+		<p><strong>First name:</strong> <%= user.first_name %></p>
+		<p><strong>Last name:</strong> <%= user.last_name %></p>
+		<p><strong>Email Address:</strong> <%= user.email_address %></p>
+		<%= link_to "View Profile", user_path(user.id), :class => "btn btn-mini" %>
+		<%= link_to "Edit user", edit_user_path(user.id), :class => "btn btn-mini" %>
+		<%= link_to "Delete this user", user_path(user.id), :confirm => "Do you really want to delete this user?", :method => :delete, :class => "btn btn-mini btn-danger" %>
+	</div>
+	<% end %>
+<% end %>

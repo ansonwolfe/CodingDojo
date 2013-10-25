@@ -1,0 +1,15 @@
+<%= render "layouts/navigation" %>
+<%= content_for :title do %>
+	
+<% end %>
+
+<fieldset>
+	<legend>All Comments for products:</legend>
+	<% @comments.each do |comment| %>
+		<blockquote>
+			<p><strong>Product name:</strong></p>
+			<cite><%= comment.product.name %></cite>
+			<small>Comment created by <%= comment.author %></small>
+		</blockquote>
+	<% end %>
+</fieldset>

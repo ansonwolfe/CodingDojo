@@ -1,0 +1,24 @@
+<% if signed_in? && current_user?(@user) %>
+	<h2>Hello, <%= @user.first_name %>!</h2>
+	<a href="<%= "home" %>">Back</a><br>
+	<a href="<%= signout_path %>">Sign Out</a><br><br>
+
+	<table id="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% @friends.each do |friend| %>
+			<tr>
+				<td><%= friend.user.first_name+" "+friend.user.last_name %></td>
+				<td><%= friend.user.email %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+<% else %>
+	<a href="<%= signin_path %>"><h2>Sign in to continue.</h2></a>
+<% end %>

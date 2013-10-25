@@ -1,0 +1,69 @@
+#wrapper{
+	padding:100px;
+	height:800px;
+	font-size:12pt;
+	font-family:"Times New Roman", Times, serif;
+	vertical-align:baseline;
+	background-color: black;
+} 
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#embarquation{
+	margin-left:auto;
+	margin-right:auto;
+	padding:36px 60px 48px 60px;
+	width:950px;
+	overflow:auto;
+	background-color:#EEEEEE;
+}
+
+#registration{
+	margin-left:auto;
+	margin-right:auto;
+	padding:12px 0px 0px 60px;
+	width:400px;
+	overflow:auto;
+	background-color:#EEEEEE;
+	border-right: 1px dotted black;
+	float:left;
+}
+
+#login{
+	margin-left:auto;
+	margin-right:auto;
+	padding:12px 0px 0px 60px;
+	width:400px;
+	overflow:auto;
+	background-color:#EEEEEE;
+	float:left;
+}
+
+
+h1{
+	font-size: 24pt;
+	font-variant: small-caps;
+	text-align: center;
+}
+
+h2{
+	font-size: 18pt;
+	font-variant: small-caps;
+	line-height: 1;
+}
+
+.errors{
+	color: red;
+}
+
+.valid{
+	color: green;
+}
+
+.error_field{
+	background-color: #FFa0a0;
+}

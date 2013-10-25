@@ -1,0 +1,12 @@
+
+<% content_for :title do %>
+	Add a new post
+<% end %>
+
+<h1>Add a new Post</h1>
+<form method="post" action="/posts">
+	<input type="text" name="title" placeholder="Title">
+	<textarea name="description"></textarea>
+	<input type="submit" name="submit" class="btn btn-danger" placeholder="Create new post">
+</form>
+

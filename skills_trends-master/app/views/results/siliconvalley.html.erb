@@ -1,0 +1,98 @@
+<% content_for :title do %>Silicon Valley Trends<% end %>
+<% content_for :header_pic do %><%=image_tag("skills_trends-bridge.png", alt: "Header Image")%><% end %>
+
+<% content_for :javascript do %>
+<script type="text/javascript">
+        $(function() {
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Job Metrics in the Silicon Valley'
+            },
+            subtitle: {
+                text: 'Programming skills most in demand'
+            },
+            xAxis: {
+                min: 0,
+                categories: [<% @craig.each do |craig| %>
+                                '<%= craig.name %>',
+                             <% end %>
+                             ],
+              
+                title: {
+                    text: null
+                },
+                labels: {
+                    y: 10,  
+                    rotation: -60,
+                    align: 'right',
+                    style: {
+                        fontSize: '14px'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                max: 3000,
+                title: {
+                    text: 'Count',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' Jobs'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                color: '#42B964',
+                name: 'Dice',
+                data: [
+                <% @dice.each do |dice| %>
+                    <%= dice.count %>,
+                <% end %>]
+            }, {
+                color: '#7CCAD5',
+                name: 'Craigslist',
+                data: [
+                <% @craig.each do |craig| %>
+                    <%= craig.count %>,
+                <% end %>]
+            }]
+        });
+    });
+</script>
+<% end %>
+
+
+
+<div id="container"></div>
+<div id="border"></div>
+
+<div id="home_link">
+    <a href="index" id="link_to">Home</a>
+</div>

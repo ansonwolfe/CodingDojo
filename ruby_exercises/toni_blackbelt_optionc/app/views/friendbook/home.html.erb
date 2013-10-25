@@ -1,0 +1,115 @@
+<% if signed_in? %>
+	<% if current_user?(@user) %>
+		<h1><%= @user.first_name+" "+@user.last_name %></h1>
+		<p>Email: <%= @user.email %></p>
+		<p>User ID: <%= @user.id %></p>
+
+		<a href="/friendbook/users">Home</a><br>
+		<a href="<%= signout_path %>">Sign Out</a>
+
+		<% if @friends.any? %>
+			<p>You have <a href="<%= '/friendbook/friends' %>"><%= @friends.count %> friends</a></p>
+		<% else %>	
+			<p>You don't have any friends yet. Make some!</p>
+		<% end %>
+
+		<% if @notifications.any? %>
+			<h2>Notifications</h2>
+			<table>
+				<tbody>
+				<% @notifications.each do |notification| %>
+					<tr>
+						<td><b><%= notification.user.first_name+" "+notification.user.last_name %></b> wants to add you as a friend</td>
+						<td>
+							<form action="/friendbook/<%= notification.id %>"method="post">
+								<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+								<input type="hidden" name="_method" value="put" />
+								<input type="hidden" name="inviter[status]" value="<%= 'friends' %>" />
+								<input type="hidden" name="user_id" value="<%= notification.id %>" />
+								<input type="hidden" name="invited[status]" value="<%= 'friends' %>" />
+								<input type="hidden" name="friend_id" value="<%= notification.id - 1 %>" />
+								<input class="notification_button" type="submit" value="Accept" />
+							</form>
+						</td>
+						<td>
+							<form action="/friendbook/<%= notification.id %>" method="post">
+								<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+								<input type="hidden" name="_method" value="delete" />
+								<input type="hidden" name="user_id" value="<%= notification.id %>" />
+								<input type="hidden" name="friend_id" value="<%= notification.id - 1 %>" />
+								<input class="notification_button" type="submit" value="Ignore" />
+							</form>
+						</td>
+					</tr>
+				<% end %>
+				</tbody>
+			</table>
+		<% end %>
+
+		<h2>People You May Want to Add as a Friend</h2>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+		<% @users.each do |user| %>
+			<% if user.email != @user.email %>	
+				<% if @allFriends.any? %>
+<!--  if anything is stored in @allFriends	... set show_name to true and show_form to false			 -->
+					<% show_name = true %>
+<!--  show_name is the code to display user name and info					 -->
+					<% show_form = false %>
+<!-- 	show_form is code to display the add friend form				 -->
+					<% @allFriends.each do |friend| %>
+						<% if friend.user_id == user.id && (friend.status == "friends" || friend.status == "invite sent") %>
+							<% show_name = false %>
+<!-- if the user is already a friend of has an invitation already sent, don't show	aka. show everyone that hasn't got an invite nor is a friend	 -->
+						<% end %>
+						<% if friend.user_id == user.id && (friend.status == "waiting approval") %>
+							<% show_form = true %>
+<!-- if the user is in teh friend table and status is 'waiting approval', show the form							 -->
+						<% end %>
+					<% end %>
+					<% if show_name %> 
+<!-- if show_name is true, show the user					 -->
+						<tr>
+							<td><%= user.first_name+" "+user.last_name %></td>
+							<td><%= user.email %></td>
+							<% if show_form %>
+<!-- if show_form is true, say 'friend request sent', otherwise, show the add friend button (weirdly opposite) -->
+								<td>Friend Request Sent</td>	
+							<% else %>					
+								<td>
+									<form action="/friendbook" method="post">
+										<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+										<input type="hidden" name="inviter[user_id]" value="<%= @user.id %>" />
+										<input type="hidden" name="inviter[friend_id]" value="<%= user.id %>" />
+										<input type="hidden" name="inviter[status]" value="<%= 'invite sent' %>" />
+										<input type="hidden" name="invited[user_id]" value="<%= user.id %>" />
+										<input type="hidden" name="invited[friend_id]" value="<%= @user.id %>" />
+										<input type="hidden" name="invited[status]" value="<%= 'waiting approval' %>" />
+										<input type="submit" value="Add Friend" />
+									</form>
+								</td>
+							<% end %>
+						</tr>
+					<% end %>
+				<% end %>	
+			<% end %>		
+		<% end %>
+			</tbody>
+		</table>
+	<% else %>
+		<h1><%= @user.first_name+" "+@user.last_name %></h1>
+		<p>Email: <%= @user.email %></p>
+		<p>User ID: <%= @user.id %></p>
+
+		<%= link_to 'Home', users_path %><br>
+	<% end %>
+<% else %>
+	<a href="<%= signin_path %>"><h2>Sign in to continue.</h2></a>
+<% end %>

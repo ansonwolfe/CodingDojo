@@ -1,0 +1,15 @@
+
+<fieldset>
+	<legend>All Registered Users:</legend>
+	<% if flash[:message] %>
+	<div class="alert">
+		<p><%= flash[:message] %></p>
+	</div>
+	<% end %>
+	<% @all_users.each do |user| %>
+		<div class="well">
+			<p><strong>User name:</strong> <%= user.first_name %> <%= user.last_name %></p>
+			<p><strong>Email:</strong> <%= user.email %>
+		</div>
+	<% end %>
+</fieldset>

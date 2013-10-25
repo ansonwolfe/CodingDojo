@@ -1,0 +1,68 @@
+
+<h3>Welcome <%= current_user.first_name %>!</h3>
+<p>
+	<!-- count # of friends I have -->
+	You have <a href=""><%= Friend.where(:user_id == 'session[:user_id]').count %>  friends</a>
+</p>
+
+<h6>Notifications:</h6>
+<table class="table table-bordered table-hover table-condensed">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+<%= @notices.each do |notice| %>
+	<tr>
+		<td><%= notice.first_name %> <%= notice.last_name %> wants to be your friend</td>
+		<td><Accept> /
+
+			<form action='/friends/<%= notice.id %>' method="post">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input type="submit" value="ignore" class="btn btn-danger">
+					<input type="hidden" name="_method" value="destroy">
+			</form>
+		</td>
+	</tr>
+<% end %>
+	</tbody>
+</table>
+
+
+<p><a href="/users">List of all registered users</a></p>
+
+<h6>People you may want to friend</h6>
+<table class="table table-bordered table-hover table-condensed">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- show all users -->
+<% @users.each do |user| %>
+		<tr>
+			<td><%= user.first_name %> <%= user.last_name %></td>
+			<td><%= user.email %> </td>>
+			<td>
+				<form action="/friends" method="post">
+				    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input type="hidden" name="friend[user_id]" value="<%= session[:user_id] %>">
+					<input type="hidden" name="friend[friend_id]" value="<%= user.id %>">
+					<input type="hidden" name="friend[status]" value="1">
+					<input type="submit" value="Add friend" class="btn">
+				</form>
+			</td>
+		</tr>	
+<% end -%>			
+	</tbody>
+</table>
+<!-- if user is logged in, show logout, else show sign in if not logged -->
+<% if current_user %>
+	<small>Logged in as:  ID #<%= session[:user_id] %></small>
+	<p><a href="/signout">Logout</a></p>
+<% end %>		

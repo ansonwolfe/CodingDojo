@@ -1,0 +1,30 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Create a Product
+<% end %>
+
+<%= simple_form_for @products, :html => {:class => "form-horizontal"} do |form| %>
+	<fieldset>
+		<legend><h1>Create a Product:</h1></legend>
+		<% if flash[:notice] %>
+		<div class="alert <%= flash[:status] ? "alert-success" : "alert-error" %>">
+			<p><%= flash[:notice] %></p>
+		</div>
+		<% end %>
+		<div class="control-group">
+			<label for="name" class="control-label">Name</label>
+			<div class="controls">
+				<%= form.input :name, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="description" class="control-label">Description</label>
+			<div class="controls">
+				<%= form.text_area :description, :label => false %>
+			</div>
+		</div>
+		<div class="controls">
+			<%= form.button :submit, :class => "btn btn-primary" %>
+		</div>
+	</fieldset>
+<% end %>

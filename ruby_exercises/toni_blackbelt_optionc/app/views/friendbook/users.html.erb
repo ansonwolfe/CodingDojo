@@ -1,0 +1,15 @@
+<h1>Users</h1>
+<% if signed_in? %>
+<h3>Signed in as <%= @user.first_name+" "+@user.last_name %></h3>
+	<a href="/friendbook/home">Profile Page</a><br>
+	<a href="<%= signout_path %>">Sign Out</a>	
+ <% else %>
+	<a href="<%= register_path %>">Register new user</a><br>
+<% end %>
+
+<% @users.each do |user| %>
+	<% if user != @user %>
+	<h3><a href="<%= user_path(user.id) %>"><%= user.first_name+" "+user.last_name %></a></h3>
+	<% end %>
+<% end %>
+ 

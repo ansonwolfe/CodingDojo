@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Yellow Belt Qualifying Exam</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+		$(document).ready(function () { 
+		  $(function() {
+		  	$( "#nav_bar" ).menu();
+// can't get menu to work! UGH!
+		    $('#slideshow').click(function(){
+		    	$('#slideshow').attr('src', 'images/slideshow_2.jpg');
+		    });	
+		  });
+		 });
+		</script>    
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img src="images/corporate-logo.png" class="left">
+			<div>
+				<ul id="search" class="right">
+					<li><input type="submit" value ="Corporate" name="dropdown" class="btn btn-primary"></li>
+					<li><input type="text" name="search"></li>
+					<li><img src="images/magnifying-glass.png"></li>
+				</ul>
+				<ul id ="nav_bar" class="right">
+					<li class="right_border class">Customers
+						<ul>
+							<li>Electric Customers</li>
+							<li>Gas Customers</li>
+						</ul>
+					</li>
+					<li class="right_border class">Products</li>
+					<li class="right_border class">Investors</li>
+					<li class="right_border class">News</li>
+					<li class="right_border class">Careers</li>
+					<li class="right_border class">Civism</li>
+					<li class="class">About Dominion</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="body">
+			<div id="login" class="left">
+				<div class ="blue_grad" id="login_head">
+					<h5 class="em">Manage Your Account</h5>
+					View/pay ebills, analyze usage and more.
+				</div>
+				<form id="form">
+					<label>User Name:</label>
+					<input type="text" name="username" class="input span2"/>
+					<a href="#"  class="em">Forgot your user name?</a>
+					<label>Password:</label>
+					<input type="text" name="password"  class="input span2"/>
+					<img src="images/lock.png">
+					<a href="#"  class="em">Forgot your password?</a>
+					<br />
+					<input type="submit" value="Sign In" class="btn btn-inverse">
+					<a href="#">Register</a>
+					<img src="images/info-icon.png">
+				</form>
+				<div id="button" class="blue_grad">
+					<a href="#" class="em">I am a New Customer</a>
+				</div>
+			</div>
+			<img id="slideshow" src="images/slideshow_1.jpg" class="left">
+			<div class="clear"></div>
+			<div id="news_bar">
+				<span class="em">News update: <a href="#">Dominion to build Solar Power Project in Georgia</a></span>
+			</div>
+
+			<div class="left boxes">
+				<img src="images/thumb.jpg" class="left">
+				<span class="em">Dominion Data Center</span><br />
+				<a href="#">Data Centers are a growing segment of our Virginia customer base.</a>	
+			</div>
+			<div class="left boxes">
+				<img src="images/thumb.jpg" class="left">
+				<span class="em">Dominion Data Center</span><br />
+				<a href="#">Data Centers are a growing segment of our Virginia customer base.</a>	
+			</div>
+			<div class="left boxes">
+				<img src="images/thumb.jpg" class="left">
+				<span class="em">Dominion Data Center</span><br />
+				<a href="#">Data Centers are a growing segment of our Virginia customer base.</a>	
+			</div>	
+			<div class="clear"></div>
+			<div id="footer" class="class">
+				<ul>
+					<li class="right_border">Help</li>
+					<li class="right_border">Legal Terms and Conditions</li>
+					<li class="right_border">Privacy</li>
+					<li class="right_border">Para Servirlos</li>	
+					<li class="right_border">Contact Us</li>
+					<li>Diversity</li>
+					<li class="right">nyse : (April 3, 2013) <span class="em">D 58.75</span> <span class="green">+0.13</span></li>
+				</ul>
+				
+			</div>	
+		</div>
+	</div>
+
+</body>
+</html>

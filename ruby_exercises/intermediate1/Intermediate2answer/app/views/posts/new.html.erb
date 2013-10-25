@@ -1,0 +1,25 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Add a new post
+<% end %>
+
+<form action="/posts" class="form-horizontal">
+	<fieldset id="new_post_form">
+		<legend><h2>Create a post:</h2></legend>
+		<div class="control-group">
+			<label for="title" class="control-label">Title</label>
+			<div class="controls">
+				<input type="text" name="title" id="title">
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="description" class="control-label">Description</label>
+			<div class="controls">
+				<textarea name="description" rows="5" id="description"></textarea>
+			</div>
+		</div>
+		<div class="controls">
+			<input type="submit" name="Create" class="btn btn-success">
+		</div>
+	</fieldset>
+</form>

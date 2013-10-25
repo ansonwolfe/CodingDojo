@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQuery Test One</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery_test_one_style.css" />
+	<script type="text/javascript" src="javascript/jquery_1.9.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("img.ninja").click(function() {
+				$(this).hide(1000);	
+			});
+			$("button.restore").click(function() {
+				$("img.ninja").show(1000);	
+			});
+		});
+	</script>
+</head>
+<body>
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<img class="ninja" src="images/ninja.jpg" alt="From the shadows I strike!" />
+	<button class="restore">Bring them ninjas back!</button>
+</body>
+</html>

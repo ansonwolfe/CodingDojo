@@ -1,0 +1,27 @@
+#wrapper {
+}
+	
+.fade {
+	height:351px;
+	width:122px;
+	padding: 30px;
+	float: left;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#navy {
+	background-image:url('images/back1.png');
+}
+
+#marine {
+	background-image:url('images/back2.png');
+}
+
+#fashion {
+	background-image:url('images/back3.jpg');
+}
+
+#shuttle {
+	background-image:url('images/back4.png');
+}

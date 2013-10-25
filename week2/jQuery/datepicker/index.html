@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>jQuery Assignment 2</title>
+	<link rel="stylesheet" type="text/css" href="css/flick/jquery-ui-1.10.2.custom.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+	  	$(window).load(function() {
+	  		$("#date").datepicker();
+	  		$("#date2").datepicker();
+
+    		$("#form_box").submit(function(){
+    			$("#from").append($(".start_date").val() + "<br>");
+    			$("#to_date").append($(".end_date").val() + "<br>");
+
+				return false;
+    		});
+  		});
+
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>jQuery - assignment 2</h1>
+		<div id="form_display">
+			<p>Your information:</p> 
+			From: <span id="from"></span>
+			<br> 
+			To: <span id="to_date"></span>
+		</div>
+
+		<form id="form_box" method="post">
+		<p>	
+			From: <input type="text" id="date" class="start_date">
+		</p>
+		<p>
+			Date: <input type="text" id="date2" class="end_date">
+		</p>
+		<input type="submit" value="Enter" class="green right">
+<!-- 		<a href="index.html" class="green button right">Submit</a> -->
+		</form>
+	</div>
+</body>
+</html>

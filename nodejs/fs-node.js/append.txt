@@ -1,0 +1,11 @@
+
+ updated contents of new_file.txt on Sat Apr 13 2013 06:38:10 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Sat Apr 13 2013 06:50:01 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Tue Apr 23 2013 22:23:47 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Wed Apr 24 2013 08:09:22 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Wed Apr 24 2013 08:12:01 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Wed Apr 24 2013 08:12:09 GMT+0800 (China Standard Time)
+ updated contents of new_file.txt on Fri Aug 23 2013 18:23:13 GMT-0700 (PDT)
+ updated contents of new_file.txt on Fri Aug 23 2013 18:23:44 GMT-0700 (PDT)
+ updated contents of new_file.txt on Fri Aug 23 2013 18:24:06 GMT-0700 (PDT)
+ updated contents of new_file.txt on Fri Aug 23 2013 18:24:29 GMT-0700 (PDT)

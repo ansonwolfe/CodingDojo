@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>jQuery Magic Ninja</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="jquery.pageslide.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript">
+		  $(function() {
+		    $( "#sortable" ).sortable();
+
+		    $('#img1').click(function(){
+		    	$('#img1').attr('src', 'image/cat-ninja1.jpg');
+		    });	
+		    $('#img2').click(function(){
+		    	$('#img2').attr('src', 'image/cat-ninja2.jpg');
+		    });	
+		    $('#img3').click(function(){
+		    	$('#img3').attr('src', 'image/cat-ninja3.jpg');
+		    });	
+		    $('#img4').click(function(){
+		    	$('#img4').attr('src', 'image/cat-ninja4.jpg');
+		    });	
+		    $('#img5').click(function(){
+		    	$('#img5').attr('src', 'image/cat-ninja5.jpg');
+		    });	
+		  });
+
+	</script>
+</head>
+<body>
+	<h1>I'm a puzzle!!!</h1>
+	<ul id="sortable">
+	  <li><img id="img1" src="image/jquery-ninja1.jpg"></li>
+	  <li><img id="img2" src="image/jquery-ninja2.jpg"></li>
+	  <li><img id="img3" src="image/jquery-ninja3.jpg"></li>
+	  <li><img id="img4" src="image/jquery-ninja4.jpg"></li>
+	  <li><img id="img5" src="image/jquery-ninja5.jpg"></li>
+	</ul>
+
+
+</div>
+</body>
+</html>

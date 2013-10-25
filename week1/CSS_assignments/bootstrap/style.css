@@ -1,0 +1,26 @@
+.hero-unit{
+	background-image: url("images/hot_cocoa_in_snow.jpg");
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+  	color: white;
+}
+
+
+.warning {
+	  background-color: #f2dede;
+}
+
+/*.table tbody tr:nth-child(7) td:last-child{
+  background-color: #f2dede;
+}
+*/
+
+.highlight_red{
+	background-color: #f2dede;
+}
+
+
+.table {
+	width: 550px;
+	margin: 15px auto;
+}

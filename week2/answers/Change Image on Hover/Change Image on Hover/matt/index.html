@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>basic page</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".fade").hover(
+					function(){
+						$("img", this).fadeOut(500);
+					},
+					function(){
+						$("img", this).fadeIn(500);
+					}
+				);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div class="fade" id="navy">
+				<img class="fading" src="images/front1.png">
+			</div>
+			<div class="fade" id="marine">
+				<img class="fading" src="images/front2.png">
+			</div>
+			<div class="fade" id="fashion">
+				<img class="fading" src="images/front3.png">
+			</div>
+			<div class="fade" id="shuttle">
+				<img class="fading" src="images/front4.png">
+			</div>
+		</div>
+	</body>
+</html>

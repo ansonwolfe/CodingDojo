@@ -1,0 +1,36 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	Edit user
+<% end %>
+
+<%= simple_form_for @user, :html => {:class => "form-horizontal"} do |form| %>
+	<fieldset>
+		<legend><h1>Edit User:</h1></legend>
+		<% if flash[:message] %>
+		<div class="alert">
+			<p><%= flash[:message] %></p>
+		</div>
+		<% end %>
+		<div class="control-group">
+			<label for="first_name" class="control-label">First Name</label>
+			<div class="controls">
+				<%= form.input :first_name, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="last_name" class="control-label">Last Name</label>
+			<div class="controls">
+				<%= form.input :last_name, :label => false %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="email_address" class="control-label">Email Address</label>
+			<div class="controls">
+				<%= form.input :email_address, :label => false %>
+			</div>
+		</div>
+		<div class="controls">
+			<%= form.button :submit, :class => "btn btn-primary" %>
+		</div>
+	</fieldset>
+<% end %>

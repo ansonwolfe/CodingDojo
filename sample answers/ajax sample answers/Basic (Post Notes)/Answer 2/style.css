@@ -1,0 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+body {
+	padding-bottom: 60px;
+}
+
+.post {
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px;
+	overflow: auto;
+}

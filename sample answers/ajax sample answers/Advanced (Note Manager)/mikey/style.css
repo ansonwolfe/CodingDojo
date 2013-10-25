@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+.note {
+	max-height: 150px;
+	overflow: auto;
+}

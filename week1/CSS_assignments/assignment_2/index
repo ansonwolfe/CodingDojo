@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> CSS Assignment 2</title>
+		<meta name="keywords" content="css, assignments, practice, exercise" />
+		<meta name="description" content="CSS exercise number 2!" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<!-- wrapper encapsulates whole page -->
+			<div id="header">
+				<img src="logo_white.png" alt="codingdojo logo in white"> Where One Zens in Code
+				<div id="header_nav_search" class="right">
+					<div id="top_right_nav">
+						<ul>
+							<li>Text size:</li>
+							<li><a href="">Normal</a></li>
+							<li class="left_border"><a href="">Large</a></li>
+							<li class="left_border"><a href="">Donate</a></li>
+							<li class="left_border"><a href="">Contact</a></li>
+						</ul>
+					</div> 
+					<!-- end of top right navigation -->
+					<div id="search_bar">
+						<form>
+							<input type="text" placeholder="Search">
+							<input type="submit" value="Search" id="search_button">
+					</form>
+					</div>  
+				</div>
+			</div>
+			<!-- end of header -->
+			<!-- begin navigation bar -->
+			<div id="top_nav">
+				<ul>
+					<li class=""><a href="">Home</a></li>
+					<li class="big_left_border"><a href="">About</a></li>
+					<li class="big_left_border"><a href="">Courses</a></li>
+					<li class="big_left_border"><a href="">FAQs</a></li>
+					<li class="big_left_border"><a href="">Apply</a></li>
+					<li class="big_left_border"><a href="">Contact</a></li>
+				</ul>
+			</div>
+			<div class="clear">
+			</div>
+			<!-- begin left navigation block -->
+			<div id="left_nav">
+				<ul>
+					<li><a href="">Developers</a></li>
+					<li><a href="">Developer's Handbook</a></li>
+					<li><a href="">Porter's Handbook</a></li>
+					<li><a href="">Source Code repositories</a></li>
+					<li><a href="">Release Engineering</a></li>
+					<li><a href="">Platforms</a></li>
+					<li><a href="">Project Ideas</a></li>
+					<li><a href="">Contributing</a></li>
+				</ul>
+			</div>
+			<!-- end left navigation block -->
+			<!-- begin main content area -->
+			<div id="main_content">
+				<h1>CSS Project 2</h1>
+				<span class="title">Introduction</span>
+					 <p>
+					 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ante ac nulla sagittis sollicitudin quis in augue. Donec ante nisi, venenatis ut eleifend eu, venenatis a mi. Aenean mollis aliquet porta. Nulla facilisi. Morbi interdum lobortis augue, eu bibendum nibh viverra ac. Duis condimentum sodales sem et auctor. Ut at eleifend mi. Donec hendrerit nisl quis lorem facilisis ac ornare lorem dictum. Donec tristique aliquet diam a fringilla. Praesent sit amet convallis dui. Donec nec velit in turpis mattis auctor nec a massa. Nam et nulla ante, ac adipiscing erat. Donec sed augue ligula. Pellentesque dictum est sed orci porttitor lacinia eu ac risus. 
+					 </p>
+				<span class="title">Table of Contents</span>
+					<ul>
+						<li><a href="">Status</a></li>
+						<li><a href="">Latest News</a></li>
+						<li><a href="">Port FAQs</a></li>
+						<li><a href="">Supported Hardware</a></li>
+						<li><a href="">Mailing List</a></li>
+						<li><a href="">Known Issues</a></li>
+					</ul>			
+				<p>
+					<span class="title">Status</span>
+				</P>
+					<P>
+						Etiam feugiat volutpat suscipit. Morbi turpis odio, lobortis ac laoreet et, imperdiet <a href="">ac libero</a>. Maecenas tortor odio, molestie a interdum nec, tempor at erat. Phasellus lorem neque, volutpat ac rhoncus sit amet, blandit ut nulla. Etiam eget neque dui. Praesent enim nulla, dapibus vitae tempus non, semper et dui. Vestibulum viverra sodales bibendum. Sed sit amet rutrum ligula. Aenean dignissim malesuada ultrices. Donec luctus magna ut metus malesuada dapibus. Donec eget euismod neque. Praesent non elementum purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque adipiscing magna vel purus venenatis ornare. Cras non semper turpis. Morbi a nibh quis tellus bibendum euismod sed ut nibh. 
+					</p>
+				<div id="news">
+					<span class="title">Latest News</span>
+					<ul>
+						<li> <span class="date">Date here: </span>some text here.</li>
+						<li> <span class="date">Date here: </span>some text here.</li>
+						<li> <span class="date">Date here: </span>some text here.</li>
+					</ul>	
+				</div>
+				<span class="title">Frequently Asked Questions</span>
+					<ol>
+						<li><a href="">link here</a></li>
+						<li><a href="">link here</a></li>
+						<li><a href="">link here</a></li>
+					</ol>
+				<p>	
+					<span class="title">How can I Apply?</span>
+				</p>
+					<p>	
+					 	<a href="">ac libero</a>. Maecenas tortor odio, molestie a interdum nec, tempor at erat. Phasellus lorem neque, volutpat ac rhoncus sit amet, blandit ut nulla. Etiam eget neque dui. Praesent enim nulla, dapibus vitae tempus non, semper et dui. Vestibulum viverra sodales bibendum. Sed sit amet rutrum ligula. Aenean dignissim malesuada ultrices. Donec luctus magna ut metus malesuada dapibus. Donec eget euismod neque. Praesent non elementum purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque adipiscing magna vel purus venenatis ornare. <a href="">Cras non semper</a> turpis. Morbi a nibh quis tellus bibendum euismod sed ut nibh. 
+					 </p>
+			</div>
+			<!-- end main content area -->
+		</div>
+		<!-- end wrapper -->
+	</body>
+</html>

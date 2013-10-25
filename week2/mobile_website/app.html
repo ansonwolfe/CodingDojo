@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    NCWHL
+                </h3>
+                <div style=" text-align:center">
+                    <img style="width: 100px; height: 100px" src="http://ncwhl.com/static/images/ncwhl_logo30.gif" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="selectmenu1">
+                        Divisions
+                    </label>
+                    <select id="selectmenu1" name="Games ">
+                        <option value="value">
+                            Show All Divisions
+                        </option>
+                        <option value="option1">
+                            Green
+                        </option>
+                        <option value="value">
+                            Red
+                        </option>
+                        <option value="value">
+                            Maroon
+                        </option>
+                        <option value="value">
+                            Blue
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div data-role="content">
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible" data-collapsed="false">
+                        <h3>
+                            Games Today
+                        </h3>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Blue
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Blue Angel vs Blue Feet
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page2" data-transition="slide">
+                                    Blues Clues vs BeDazzled
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Maroon
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Marooned vs Mopeds
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>
+                            Games This Week
+                        </h3>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Red Division
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Red Rangers vs Redmongers
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Red Skins vs Buckeye
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Green Division
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Green Thumbs vs Greenlings
+                                </a>
+                            </li>
+                            <li data-theme="">
+                                <a href="#page1" data-transition="slide">
+                                    Greeee! vs Gangrene
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>
+                            Games Next Week
+                        </h3>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Divider
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Blue Angel vs BeDazzled
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Bedheads vs Blues Clues
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Maroon
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    MaroonHeads vs Mopeds
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Maroonoeys vs Meddlers
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Red
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Red Robins vs Red Rangers
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Rovers vs Remington
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <h4>
+                    Copyright B. Lai
+                </h4>
+            </div>
+        </div>
+        <!-- start page 2 -->
+<div data-role="page" id="page2">
+    <div data-theme="a" data-role="header">
+                <a data-role="button" data-transition="flow" data-theme="a"
+                href="#page1" class="ui-btn-left">
+                    Home
+                </a>
+        <h3>
+            NCWHL
+        </h3>
+        <div style=" text-align:center">
+            <img style="width: 100px; height: 100px" src="http://ncwhl.com/static/images/ncwhl_logo30.gif">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="textarea2">
+                Blues Clues vs BeDazzled
+            </label>
+            <p>Thurs, 4/15, 7:00PM</p>
+            
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="" data-icon="">
+                        Ice Oasis, Redwood City, CA
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ice Oasis, Redwood City&amp;zoom=14&amp;size=288x200&amp;markers=Ice Oasis, Redwood City, CA&amp;sensor=false"
+        width="288" height="200">
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Blues Clues
+                </h3>
+                <div id="checkboxes1" data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                            Confirmed Players:
+                        </legend>
+                        <input id="checkbox1" name="" type="checkbox">
+                        <label for="checkbox1">
+                            Janet C.
+                        </label>
+                        <input id="checkbox2" name="" type="checkbox">
+                        <label for="checkbox2">
+                            Mary Ann Lewis
+                        </label>
+                        <input id="checkbox3" name="" type="checkbox">
+                        <label for="checkbox3">
+                            Annie Farland
+                        </label>
+                        <input id="checkbox4" name="" type="checkbox">
+                        <label for="checkbox4">
+                            Bonnie Donovan
+                        </label>
+                    </fieldset>
+                </div>
+                <input type="submit" data-theme="b" data-icon="plus" data-iconpos="left"
+                value="Add Player" onClick="parent.location='#page3'">
+                <input type="submit" data-theme="d" value="Post for Subs" onClick="parent.location='#page4'">
+            </div>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-theme="c" data-collapsed="false">
+                <h3>
+                    BeDazzled
+                </h3>
+                <div id="checkboxes2" data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                            Confirmed Players:
+                        </legend>
+                        <input id="checkbox5" name="" type="checkbox">
+                        <label for="checkbox5">
+                            Jane Does
+                        </label>
+                        <input id="checkbox6" name="" type="checkbox">
+                        <label for="checkbox6">
+                            Kara Kass
+                        </label>
+                        <input id="checkbox7" name="" type="checkbox">
+                        <label for="checkbox7">
+                            Jamie Woo
+                        </label>
+                        <input id="checkbox8" name="" type="checkbox">
+                        <label for="checkbox8">
+                            Bessie Spann
+                        </label>
+                        <input id="checkbox9" name="" type="checkbox">
+                        <label for="checkbox9">
+                            Lucinda Ono
+                        </label>
+                    </fieldset>
+                </div>
+                <input type="submit" data-theme="b" data-icon="plus" data-iconpos="left"
+                value="Add Player" onClick="parent.location='#page3'"> 
+                <input type="submit" data-theme="d" value="Post for Subs" onClick="parent.location='#page4'">
+            </div>
+        </div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h4>
+            Copyright B. Lai
+        </h4>
+    </div>
+</div>
+    <!-- page 3 Add a Player -->
+        <div data-role="page" id="page3">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-rel="back" data-transition="flow" data-theme="a"
+                href="#page2" class="ui-btn-left">
+                    Cancel
+                </a>
+                <h3>
+                    Blues vs Bedazzled
+                </h3>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="textinput1">
+                        Add a Player
+                    </label>
+                    <input name="" id="textinput1" placeholder="Player Name" value="" type="text">
+                </div>
+                <input type="submit" data-theme="b" value="Submit" onClick="parent.location='#page2'">
+            </div>
+        </div>
+        <!-- page 4 sub request -->
+        <div data-role="page" id="page4">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-rel="back" data-transition="flow" data-theme="a"
+                href="#page2" class="ui-btn-left">
+                    Cancel
+                </a>
+                <h3>
+                    Blues vs Bedazzled
+                </h3>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="textarea1">
+                        Blues Clues
+                    </label>
+                    <textarea name="" id="textarea1" placeholder="">Game tonight. Need sub. Centre preferred.</textarea>
+                </div>
+                <input type="submit" data-theme="b" value="Submit" onClick="parent.location='#page2'">
+            </div>
+        </div>
+    </body>
+</html>

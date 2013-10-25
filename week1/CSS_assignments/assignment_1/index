@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> CSS Assignment 1</title>
+		<meta name="keywords" content="css, assignments, practice, exercise" />
+		<meta name="description" content="CSS exercise number 1!" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1>A Little Knowledge for the Day</h1>
+			</div>
+
+			<div id="left_nav" class="left">
+				<a href="index.html">Home</a>
+				<ul>
+					<li><a href="articles.html">link 1</a>
+						<ul>
+							<li><a href="">nested link 1</a></li>
+							<li><a href="">nested link 2</a></li>
+							<li><a href="">nested link 3</a></li>
+							<li><a href="">nested link 4</a></li>
+							<li><a href="">nested link 5</a></li>
+							<li><a href="">nested link 6</a></li>
+							<li><a href="">nested link 7</a></li>
+							<li><a href="">nested link 8</a></li>
+						</ul>
+					</li>	
+					<li><a href="">link 2</a></li>
+					<li><a href="">link 3</a></li>
+					<li><a href="">link 4</a></li>
+				</ul>
+				<!-- Insufficient coffee to power navigation links! j/k =) -->
+			</div>
+
+			<div id="main_content" class="left">
+				<h2>A Brief Lesson in Coffee</h2>
+
+				<p>Coffee is a brewed beverage with a distinct aroma and flavor, prepared from the roasted seeds of the Coffea plant. The seeds are found in coffee "berries", which grow on trees cultivated in over 70 countries, primarily in equatorial Latin America, Southeast Asia, India and Africa. Green (unroasted) coffee is one of the most traded agricultural commodities in the world.[1] Coffee is slightly acidic (pH 5.0 to 5.1[2]) and can have a stimulating effect on humans because of its caffeine content. It is one of the most consumed drinks in the world.[3]</p>
+
+				<ul>
+					<li>Coffee is a brewed beverage with a distinct aroma and flavor, prepared from the roasted seeds of the Coffea plant. The seeds are found in coffee "berries", which grow on trees cultivated in over 70 countries, primarily in equatorial Latin America, Southeast <a href="http://en.wikipedia.org/wiki/Asia">Asia</a>, <a href="http://en.wikipedia.org/wiki/India">India</a> and <a href="http://en.wikipedia.org/wiki/Africa">Africa</a>. Green (unroasted) coffee is one of the most traded agricultural commodities in the world.[1] Coffee is slightly acidic (pH 5.0 to 5.1[2]) and can have a stimulating effect on humans because of its caffeine content. It is one of the most consumed drinks in the world.[3]
+					</li>
+
+					<li>Wild coffee's energizing effect was likely first discovered in the northeast region of Ethiopia. Coffee cultivation first took place in southern Arabia;[4] the earliest credible evidence of coffee-drinking appears in the middle of the 15th century in the Sufi shrines of <a href="http://en.wikipedia.org/wiki/Yemen">Yemen</a>.[4]
+					</li>
+					<li>In <a href="http://en.wikipedia.org/wiki/East_Africa">East Africa</a> and <a href="http://en.wikipedia.org/wiki/Yemen">Yemen</a>, coffee was used in native religious ceremonies that were in competition with the Christian Church. As a result, the Ethiopian Church banned its secular consumption until the reign of Emperor Menelik II of Ethiopia.[5] The beverage was also banned in Ottoman Turkey during the 17th century for political reasons[6] and was associated with rebellious political activities in Europe.
+					</li>
+
+				</ul>
+				
+				
+
+			</div>
+			<div class="clear"></div>
+
+			<div id="footer">
+				Information from <a href="http://en.wikipedia.org/wiki/Coffee">Wikipedia</a>. Contact at <a href="mailto:me@postalmeme.com">Contact me!</a>
+			</div>
+
+
+
+		</div>
+	</body>
+</html>

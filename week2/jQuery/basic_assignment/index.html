@@ -1,0 +1,158 @@
+<html>
+<head>
+	<title>jQuery Basic Assignment</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="customstyle.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			// begin .addClass function
+			$('#addclass_button').click(function(){
+				$('#sample_text').addClass('highlight');
+			});
+			// begin .after function
+			$('#add_button').click(function(){
+				$('.text_container').after('<p>Added after</p>');
+			});
+			// begin .append function
+			$('#form').submit(function(){
+				$('.text_container').append($('#textarea').val());
+				$('#textarea').val('type in me again');
+				return false;
+			});
+			// $('#append_button').click(function(){
+			// 	$('.text_container').append('Appended inside! ');
+			// });
+			$('#before_button').click(function(){
+				$('.text_container').before('<p>Added before! </p>');
+			});
+			// hides image and source attr on load
+			$('img, #attr').hide()
+			// begin fade in
+			$('#fade_in').click(function(){
+				$('img').fadeIn('slow');
+			});
+			// begin buttons for image manipulation
+			$('#fade_out').click(function(){
+				$('img').fadeOut('slow');
+			});
+			$('#slide_up').click(function(){
+				$('img').slideUp('linear');
+			});
+			$('#slide_down').click(function(){
+				$('img').slideDown('linear');
+			});
+			$('#hide').click(function(){
+				$('img').hide();
+			});	
+			$('#show').click(function(){
+				$('img').show();
+			});	
+			$('#toggle').click(function(){
+				$('#attr').toggle();
+			});	
+			// grabs attribute 'src' from the image
+			var attr = $('img').attr('src');
+				$('#attr').text(attr);
+			// submit button
+            $('#test_form').submit(function(){
+                $('#messages').append("This is what you wrote: " + $('#new_message').val() + "<br />" + "<form class='comment_form'><textarea class='comment_text'></textarea><input type='submit' value='Respond back' class='green'/></form>");
+                //$('#new_message').val('');
+
+                //This is an event lister for the form that was just created. This listens to the submission above and creates a new comment.
+                $('.comment_form').submit(function(){
+                    alert('Hello, you are now responding to an earlier text');
+                    // return false allows submitting without reloading page
+                    return false;
+                });
+                return false;
+            });
+            // serialize test in form
+            $('#test_form').submit(function(event) {
+				  console.log($(this).serialize());
+				});
+            $('#focus_area').focus(function(){
+            	alert('You are on the handler for .focus()!');
+            });
+			$("#val").click(function(){
+				$("#focus_area").val("Your text has been replaced!");
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<!-- begin .addClass -->
+		<input id="addclass_button" type="submit" value="add class" class="green">
+		<p>
+			This text is for <span id="sample_text">addClass</span>
+		</p>
+		<hr></hr>
+		<div class="text_container">
+		</div>
+		<div id="input_buttons">	
+			<form id="form">
+				<textarea id="textarea"></textarea>
+				
+				<!-- begin .append -->
+				<input id="append_button" type="submit" value="Append text" class="green">
+			</form>
+				<!-- begin .after -->
+			<input id="add_button" type="submit" value="Add after" class="green">
+			
+				<!-- begin .before -->
+			<input id="before_button" type="submit" value="Add before" class="green">
+
+		</div>
+		<hr></hr>
+
+		
+		
+		<!-- begin buttons -->
+		<div id="big_box">
+			<div id="image_buttons">
+				<p>
+					<input id="fade_in" type="button" value="Fade In" class="green">
+					<input id="fade_out" type="button" value="Fade Out" class="green">
+				</p>
+				<p>
+					<input id="slide_down" type="button" value="Slide Down" class="green">
+					<input id="slide_up" type="button" value="Slide Up" class="green">
+				</p>
+				<p>
+					<input id="show" type="button" value="Show Me!" class="green">
+					<input id="hide" type="button" value="Hide Me!" class="green">
+				</p>	
+			</div>
+			<img src="http://cdnvideo.dolimg.com/cdn_assets/75addfaaf14f1a98b6037d2e59d1513b3b01bbad.jpg">
+		</div>	
+		<hr></hr>
+			<!-- grabs attribute -->
+			<p>
+				<input id="toggle" type="button" value="Show Img Source" class="green"> <span id="attr"></span>
+			</p>
+		<hr></hr>
+		<!-- commenting boxes -->
+            <form id="test_form">
+                <textarea id="new_message"></textarea>
+                <input type="submit" value="Post a message" class="green" />
+            </form>
+            <div id="messages"></div>	
+        <hr></hr>
+        <!-- focus and replacing text using .val -->
+        	<textarea id="focus_area" placeholder="this is where focus goes!"></textarea>    	
+ 			<input id="val" type="submit" value="Replace text!" class="green" />
+
+
+
+
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+/*Basics*/
+
+body {
+	background-color: #E5CBBC;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+
+form {
+	padding: 30px;
+}
+
+input {
+	display: block;
+	margin: 10px;
+}
+
+img {
+	vertical-align: top;
+	border: 1px solid black;
+	display: block;
+}
+
+button {
+	margin-bottom: 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.centermargin {
+	margin: 0px auto;
+}
+
+.noStyle {
+	list-style-type: none;
+}
+
+.displaynone {
+	display: none;
+}
+
+/*Content*/
+
+#container {
+	margin: 0px auto;
+	width: 800px;
+	min-height: 800px;
+	background-color: #645315;
+	border-radius: 10px;
+}
+
+#header {
+	min-height: 100px;
+	color: #CCB974;
+	background-color: #736041;
+	border-radius: 10px 10px 0px 0px;
+}
+
+	#header h1{
+		text-align: center;
+		padding-top: 20px;
+	}
+
+#sortables li {
+	background-color: #9A8641;
+	color: #CCBE8B;
+	margin: 2px;
+	padding: 2px;
+}
+
+.assignment {
+	min-height: 120px;
+	background-color: #CCB974;
+	padding: 20px;
+	margin: 20px 30px;
+	border-radius: 10px;
+}
+
+#text-area {
+	width: 500px;
+	min-height: 30px;
+	background-color: #8f817d;
+}
+ #beforenotice {
+ 	font-size: 20px;
+ 	font-weight: bold;
+ 	margin-right: 20px;
+ }
+
+#tabs_exercise {
+	background-color: white;
+}
+
+#attribute_display p {
+	font-size: 20px;
+}
+
+#footer {
+	min-height: 30px;
+	background-color: #736041;
+	text-align: center;
+	border-radius: 0px 0px 10px 10px;
+	padding-top: 10px;
+}
+

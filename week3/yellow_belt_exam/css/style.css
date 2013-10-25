@@ -1,0 +1,106 @@
+* {
+	margin: 10px;
+	font-family: helvetica, verdana, arial;
+	font-size: 9pt;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+	padding: 2px 2px;
+	margin: 0px;
+}
+h2, h1 {
+	color: white;
+	background-color: #102D58;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.clear {
+	clear: both;
+}
+#wrapper {
+	width: 900px;
+	margin: 0px auto;
+}
+#header {
+	background-color: #EEEEEE;
+	border-bottom: 1px white solid;
+	height: 100px;
+	margin: 0px;
+}	
+#body {
+	height: 630px;
+	margin: 0px;
+	background-color: #18335A;
+}
+#login {
+	width: 210px;
+	height: 320px;
+	background-color: #CAD3DC;
+}
+#login_head {
+	padding: 5px;
+}
+#button {
+	width: 185px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	border: 1px white solid;
+	margin: 0px;
+}
+#button a {
+	color: white;
+}
+#slideshow {
+	width: 570px;
+	height: 380px;}
+#form {
+	margin: 10px;
+}
+#news_bar {
+	line-height: 35px;
+	padding-left: 15px;
+	background-color: #CAD3DC;
+}
+#footer {
+	line-height: 28px;
+	background-color: #CAD3DC;
+}
+.blue_grad { 
+	margin: 0px;
+	color: white;
+	background: rgb(57,93,177); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(57,93,177,1) 5%, rgba(48,69,136,1) 39%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(57,93,177,1)), color-stop(39%,rgba(48,69,136,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(57,93,177,1) 5%,rgba(48,69,136,1) 39%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(57,93,177,1) 5%,rgba(48,69,136,1) 39%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(57,93,177,1) 5%,rgba(48,69,136,1) 39%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(57,93,177,1) 5%,rgba(48,69,136,1) 39%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#395db1', endColorstr='#304588',GradientType=0 ); /* IE6-9 */
+}
+.boxes {
+	height: 100px;
+	width: 265px;
+	background-color: #CAD3DC;
+	padding: 5px;
+}
+.green {
+	color: green;
+}
+.right_border {
+	border-right: 1px solid gray;
+	padding-right: 7px;
+}
+.class {
+	color: gray;
+}
+.em {
+	font-weight: bold;
+}

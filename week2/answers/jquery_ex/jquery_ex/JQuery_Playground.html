@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JQuery Playground</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>		
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen"/>		
+		<link href="css/JQuery_Playground.css" rel="stylesheet">
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$("input[name='first_name']").focus();
+
+				$('#cust').submit(function(){
+					$('#customer_data h3').append($("input[name='first_name']").val() + " " + $("input[name='last_name']").val() + "!! ");
+					$('input[type="submit"]').after('<span>Thanks!</span>')
+					return false;
+				});
+
+				$('#new-html').click(function(){
+					$('#html-area').text($('#cust').serialize());
+					var dialogPosition = [100, 50];
+					$('#dialog').dialog({
+						position: dialogPosition,
+						minHeight: "100px"
+					});
+					$('#new-html').before('<span id="beforenotice">Great Job!</span>');
+				});
+
+				$("#toggle_pic").click(function(){
+					$('img[src="toomuchcoffee.gif"]').toggle();
+				});
+
+				$("#show_pic").click(function(){
+					$('img[src="toomuchcoffee.gif"]').show();
+				});
+
+				$("#hide_pic").click(function(){
+					$('img[src="toomuchcoffee.gif"]').hide();
+				});
+
+				$('#slide_onoff').click(function(){		
+					$('#sliding_fun p').slideToggle();
+				});
+
+				$('#slide_down').click(function(){		
+					$('#sliding_fun p').slideDown();
+				});
+
+				$('#slide_up').click(function(){		
+					$('#sliding_fun p').slideUp();
+				});
+
+				$("#fadeout_pic").click(function(){		
+					$('img[src="toomuchcoffee.gif"]').fadeOut();
+				});
+
+				$('#calendar_fun input').datepicker();
+
+				$('#veggies').sortable();
+
+				$('#tabs_exercise').tabs();
+
+				$('#accordion').accordion();
+
+				$('#accordion_exercise').addClass('assignment');
+
+				$('#showAttribute').click(function(){
+					$('#attribute_display span').text(
+						$('#showAttribute').attr('id')
+					);
+				});
+				$('#showhtml').click(function(){
+					$('#html_display').text(
+						$('#show_html_code').html()
+					);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>JQuery Playground</h1>
+			</div>			
+			<div id="append_exercise" class="assignment">			
+				<form id="cust" class="form-horizontal" name="customer_form" action="something.php" method="post">
+					<fieldset>
+						<legend>Append Your Name</legend>
+						<input name="first_name" type="text" class="form_data" placeholder="First Name" />
+						<input name="last_name" type="text" class="form_data" placeholder="Last Name" />
+						<input type="submit" value="Append" />
+					</fieldset>
+				</form>
+				<div id="customer_data">
+					<h3></h3>
+				</div>
+			</div><!-- end append exercise -->
+			<div id="serialize" class="assignment center">
+				<button id="new-html">Serialization</button>
+				<div id="html-area">
+				</div>
+			</div><!-- end serialize -->
+			<div id="picture_fun" class="assignment center">
+				<button id="toggle_pic">On-Off Picture</button>
+				<button id="show_pic">Show Picture</button>
+				<button id="hide_pic">Hide Picture</button>
+				<button id="fadeout_pic">Fadeout Pic</button>	
+				<img alt="Too Much Coffee Man" src="toomuchcoffee.gif" height="80" width="80" class="centermargin"/>
+			</div><!-- end picture fun -->
+			<div id="sliding_fun" class="assignment center">
+				<button id="slide_onoff">On-Off Slide</button>
+				<button id="slide_down">Slide Down</button>
+				<button id="slide_up">Slide Up</button>
+				<p>uspendisse potenti. Phasellus adipiscing purus id dui malesuada ac bibendum risus convallis. Etiam cursus varius risus sed euismod. Morbi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eu urna laoreet tincidunt. Sed molestie libero sit amet nibh laoreet at viverra lacus dignissim. Suspendisse nisl diam, pretium sit amet fringilla in, facilisis ac nunc. Integer at odio leo, non dictum tortor. Etiam felis ante, sollicitudin sed mattis in, egestas quis era</p>
+			</div><!-- end sliding fun -->
+			<div id="calendar_fun" class="assignment">
+					<fieldset>
+						<legend>Pick the Dates</legend>
+						<label for="start_date">Start Date</label>
+						<input name="start_date" id="start_date" type="text" class="form_data" />
+						<label for="end_date">End Date</label>						
+						<input name="end_date" id="end_date" type="text" class="form_data" />
+					</fieldset>
+			</div><!-- end calendar fun -->
+			<div id="sortables" class="assignment">
+				<h3>Drag and Resort the List Items</h3>
+				<ul id="veggies" class="unstyled">
+					<li>Carrots</li>
+					<li>Peas</li>
+					<li>Onions</li>
+					<li>Turnips</li>
+					<li>Parsnips</li>
+				</ul>
+			</div><!-- end sortables -->
+			<div id="accordion_exercise">
+				<h3>Accordion Fun</h3>
+				<div id="accordion">
+					<h3>Article 1</h3>
+					<p>Morbi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eu urna laoreet t</p>
+					<h3>Article 2</h3>
+					<p>Morbi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eu urna laoreet t</p>
+					<h3>Article 3</h3>
+					<p>Morbi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eu urna laoreet t</p>
+					<h3>Article 4</h3>
+					<p>Morbi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eu urna laoreet t</p>
+				</div>
+			</div><!-- end accordion_exercise-->
+			<div id="dialog" class="displaynone">
+				<p>Thank You for Serializing.</p>
+			</div>
+			<div id="tabs_exercise" class="assignment white">
+				<h3>Tabs</h3>
+				<ul id="vegatables" class="unstyled">
+					<li><a href="#carrots">Carrots</a></li>
+					<li><a href="#peas">Peas</a></li>
+					<li><a href="#turnips">Turnips</a></li>
+				</ul>
+				<div id="carrots">
+					<p>Morbi suscipit lacinia li suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi euorem, et pellentes</p>
+				</div>
+				<div id="peas">
+					<p>mattis egi suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eueus. Curabitur lacinia nisi eu ur</p>
+				</div>
+				<div id="turnips">
+					<p>iverra lai suscipit lacinia lorem, et pellentesque libero congue faucibus. Ut sit amet diam non risus faucibus mattis egeus. Curabitur lacinia nisi eucus dignissim. Suspendisse nisl diam, pre</p>
+				</div>
+			</div><!-- end tabs_exercise -->
+			<div id="show_attribute" class="assignment center">
+				<button id="showAttribute">Show ID of this &lt;div&gt;</button>
+				<div id="attribute_display">
+					<p>ID = "<span></span>"</p>
+				</div>
+			</div><!-- end show attribute -->
+			<div id="show_html_code" class="assignment center">
+				<button id="showhtml">Show HTML of this &lt;div&gt;</button>
+				<div id="html_display">
+				</div>
+			</div><!-- end show html -->
+			<div id="footer">
+				<p>&#169;2013 Ian Dahlberg</p>
+			</div>
+		</div><!-- end container -->
+	</body>
+</html>

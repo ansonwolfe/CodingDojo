@@ -1,0 +1,22 @@
+<%= render "layouts/navigation" %>
+<% content_for :title do %>
+	All Products
+<% end %>
+
+<fieldset>
+	<legend>All Products:</legend>
+	<% if flash[:message] %>
+	<div class="alert">
+		<p><%= flash[:message] %></p>
+	</div>
+	<% end %>
+	<% @products.each do |product| %>
+		<div class="well">
+			<p><strong>Product name:</strong> <%= product.name %></p>
+			<p><strong>Product description:</strong> <%= product.description.nil? or product.description== "" ? '<span class="muted">No description yet</span>'.html_safe : product.description %></p>
+			<%= link_to "View Product", product_path(product.id), :class => "btn btn-mini" %>
+			<%= link_to "Edit Product", edit_product_path(product.id), :class => "btn btn-mini" %>
+			<%= link_to "Delete this product", product_path(product.id), :method => :delete, :confirm => "Are you sure you want to delete this product?", :class => "btn btn-mini btn-danger" %>
+		</div>
+	<% end %>
+</fieldset>
