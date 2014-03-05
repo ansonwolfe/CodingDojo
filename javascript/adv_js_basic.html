@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Advanced Javascript - Basic 1 </title>
+	<script type="text/javascript">
+		document.onclick = function(){
+			// get window dimensions
+			var w = window,
+			    // d = document,
+			    // e = d.documentElement,
+			    // g = d.getElementsByTagName('body')[0],
+			    wx = w.innerWidth || e.clientWidth || g.clientWidth,
+			    wy = w.innerHeight|| e.clientHeight|| g.clientHeight;
+// generate random numbers - put this into function to refactor
+			var cx = Math.floor(Math.random() * wx + 1);
+			var cy = Math.floor(Math.random() * wy + 1);
+			var r = Math.floor(Math.random() * 20 + 1);
+			var rg = Math.floor(Math.random() * 256 + 1);
+			var g = Math.floor(Math.random() * 256 + 1);
+			var b = Math.floor(Math.random() * 256 + 1);				
+			console.log(cx, cy, r, rg, g, b);
+
+			function makeSVG(tag, attrs) {
+		        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
+		        for (var k in attrs)
+		        {
+		            el.setAttribute(k, attrs[k]);
+		        }
+		        return el;
+		    }
+
+			function Circle(cx, cy, r, rg, g, b){
+				var circle = makeSVG('circle', 
+					{ cx: cx,
+					  cy: cy,
+					  r:  r,
+					  style: "fill: black" 
+					});
+				}
+			Circle(cx,cy,r,rg,g,b);	
+
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

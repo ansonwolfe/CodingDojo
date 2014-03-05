@@ -36,7 +36,7 @@
 					}
 					else
 					{
-						echo "<th>*</th>";
+						echo "<th></th>";
 					}
 				}
 ?>

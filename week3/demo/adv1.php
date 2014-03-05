@@ -65,6 +65,18 @@
 			echo "<td>" . strlen(trim($users[$i]['first_name']) . " " . trim($users[$i]['last_name'])). "</td>";
 			echo "</tr>";
 			}
+			foreach ($users as $user) {
+			    // echo "<pre>";
+
+			    // var_dump( $user );
+			    // echo "</pre>";
+			    echo "$user[first_name]";
+			    
+			    // foreach ($user as $key => $value) {
+			    	
+			    // 	echo "First name is $key. Last name is : $value </br>";
+			    // }
+			}
 
 		?>
 
