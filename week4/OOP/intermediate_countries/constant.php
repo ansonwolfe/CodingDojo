@@ -5,4 +5,4 @@
 	define('DB_USER', 'root');
 	define('DB_PASS', 'root'); //set DB_PASS as 'root' if you're using MAMP
 	define('DB_DATABASE', 'world');
-?>
+?>c
